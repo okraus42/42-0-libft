@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okraus <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 17:36:39 by okraus            #+#    #+#             */
-/*   Updated: 2023/01/12 17:38:37 by okraus           ###   ########.fr       */
+/*   Updated: 2023/12/28 16:33:23 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,14 @@ void	ft_putstr_fd(char *s, int fd)
 	unsigned long	i;
 
 	i = 0;
-	while (s[i])
+	if (!s)
+		write(fd, "(null)", 6);
+	else
 	{
-		write(fd, &s[i], 1);
-		i++;
+		while (s[i])
+		{
+			write(fd, &s[i], 1);
+			i++;
+		}
 	}
 }
