@@ -6,7 +6,7 @@
 #    By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 13:43:18 by okraus            #+#    #+#              #
-#    Updated: 2023/12/28 16:46:22 by okraus           ###   ########.fr        #
+#    Updated: 2025/05/24 18:26:23 by okraus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,8 +81,8 @@ fclean: clean
 
 re: fclean all
 
-#so:
-#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BSRC)
-#	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BOBJ)
+# so:
+# 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BSRC)
+# 	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BOBJ)
 
 .PHONY: all clean fclean re bonus #so

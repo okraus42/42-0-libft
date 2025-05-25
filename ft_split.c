@@ -6,20 +6,20 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:02:36 by okraus            #+#    #+#             */
-/*   Updated: 2023/12/28 16:32:02 by okraus           ###   ########.fr       */
+/*   Updated: 2025/05/24 18:14:39 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_check_separator(char s, char c)
-{
-	if (s == c)
-		return (1);
-	return (0);
-}
+// static inline int	ft_check_separator(char const s, char const c)
+// {
+// 	if (s == c)
+// 		return (1);
+// 	return (0);
+// }
 
-static int	ft_count_strings(char *s, char c)
+static int	ft_count_strings(char const *s, char const c)
 {
 	int	i;
 	int	count;
@@ -28,69 +28,78 @@ static int	ft_count_strings(char *s, char c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		while (s[i] != '\0' && ft_check_separator(s[i], c))
+		while (s[i] != '\0' && s[i] == c)
 			i++;
 		if (s[i] != '\0')
 			count++;
-		while (s[i] != '\0' && !ft_check_separator(s[i], c))
+		while (s[i] != '\0' && s[i] != c)
 			i++;
 	}
 	return (count);
 }
 
-static int	ft_strlen_sep(char *s, char c)
+static void	ft_move_pointer(char **dst, char d, int *in_word, int i)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] && !ft_check_separator(s[i], c))
-		i++;
-	return (i);
+	**dst = d;
+	(*dst)++;
+	*in_word = i;
 }
 
-static char	*ft_word(char *s, char c)
+static void	ft_fill_words(char **result, const char *s, char c)
 {
-	int		len_word;
+	char	*buf;
+	char	*dst;
 	int		i;
-	char	*word;
+	int		in_word;
+	int		idx;
 
+	buf = (char *)(result + ft_count_strings(s, c) + 1);
+	dst = buf;
 	i = 0;
-	len_word = ft_strlen_sep(s, c);
-	word = (char *)malloc(sizeof(char) * (len_word + 1));
-	while (i < len_word)
+	in_word = 0;
+	idx = 0;
+	while (s[i] || in_word)
 	{
-		word[i] = s[i];
+		if (s[i] && s[i] != c)
+		{
+			if (!in_word)
+				result[idx++] = dst;
+			ft_move_pointer(&dst, s[i], &in_word, 1);
+		}
+		else if (in_word)
+			ft_move_pointer(&dst, '\0', &in_word, 0);
 		i++;
 	}
-	word[i] = '\0';
-	return (word);
+	result[idx] = NULL;
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ss;
-	int		i;
-	int		j;
+	char	**result;
+	int		words;
+	size_t	s_len;
+	size_t	total_size;
 
-	j = 0;
-	i = 0;
 	if (!s)
 		return (NULL);
-	ss = (char **)malloc(sizeof(char *) * (ft_count_strings((char *)s, c) + 1));
-	if (ss == NULL)
-		return (NULL);
-	while (s[j] != '\0')
-	{
-		while (s[j] != '\0' && ft_check_separator(s[j], c))
-			j++;
-		if (s[j] != '\0')
-		{
-			ss[i] = ft_word(&((char *)s)[j], c);
-			i++;
-		}
-		while (s[j] && !ft_check_separator(s[j], c))
-			j++;
-	}
-	ss[i] = 0;
-	return (ss);
+	words = ft_count_strings(s, c);
+	s_len = ft_strlen(s);
+	total_size = sizeof(char *) * (words + 1) + s_len + 1;
+	result = malloc(total_size);
+	if (result)
+		ft_fill_words(result, s, c);
+	return (result);
 }
+
+// #include <stdio.h>
+
+// int	main(int argc, char *argv[])
+// {
+// 	if (argc != 3)
+// 		return (1);
+// 	char **split = ft_split(argv[1], argv[2][0]);
+// 	for (int i = 0; split[i]; i++)
+// 		printf("split[%d]: %s\n", i, split[i]);
+// 	free(split);
+// 	return (0);
+// }
