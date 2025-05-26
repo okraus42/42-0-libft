@@ -6,7 +6,7 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:55:07 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/25 18:58:30 by okraus           ###   ########.fr       */
+/*   Updated: 2025/05/26 17:46:28 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isprint(int c)
 {
-	return (((unsigned)c < 256U) * (g_index[c & 0xFF] & 0x4000));
+	return (((unsigned)c < 256U) * (ft_inline()[c & 0xFF] & 0x4000));
 }

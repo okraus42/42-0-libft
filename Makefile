@@ -6,12 +6,13 @@
 #    By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 13:43:18 by okraus            #+#    #+#              #
-#    Updated: 2025/05/24 18:26:23 by okraus           ###   ########.fr        #
+#    Updated: 2025/05/26 18:01:41 by okraus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
-SRC		= ft_isalpha.c\
+SRC		= ft_inline.c\
+		ft_isalpha.c\
 		ft_toupper.c\
 		ft_isdigit.c\
 		ft_tolower.c\
@@ -59,7 +60,7 @@ BOBJ	= $(BSRC:.c=.o)
 INCS	= libft.h
 LIBC	= ar rcs
 CC		= cc
-CFLAGS	= -Wall -Wextra -Werror #-fPIC
+CFLAGS	= -Wall -Wextra -Werror -O3 -fPIC
 
 all: $(NAME)
 
@@ -74,15 +75,15 @@ bonus: $(OBJ) $(BOBJ)
 
 clean:
 	rm -f $(OBJ) $(BOBJ)
-#	rm -f *.so
+	rm -f *.so
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-# so:
-# 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BSRC)
-# 	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BOBJ)
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BSRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BOBJ)
 
-.PHONY: all clean fclean re bonus #so
+.PHONY: all clean fclean re bonus so

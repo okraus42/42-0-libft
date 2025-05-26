@@ -6,7 +6,7 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:01:50 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/25 18:58:07 by okraus           ###   ########.fr       */
+/*   Updated: 2025/05/26 17:46:11 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalpha(int c)
 {
-	return (((unsigned)c < 256U) * (g_index[c & 0xFF] & 0x400));
+	return (((unsigned)c < 256U) * (ft_inline()[c & 0xFF] & 0x400));
 }
