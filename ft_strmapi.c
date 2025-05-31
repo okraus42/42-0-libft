@@ -6,7 +6,7 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 10:59:26 by okraus            #+#    #+#             */
-/*   Updated: 2023/12/28 16:32:26 by okraus           ###   ########.fr       */
+/*   Updated: 2025/05/31 19:47:04 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[i] != 0)
 		i++;
-	string = (char *)malloc((i + 1) * sizeof(char));
+	string = malloc((i + 1) * sizeof(char));
 	if (string == NULL)
 		return (string);
 	i = 0;

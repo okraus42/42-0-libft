@@ -6,7 +6,7 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:02:44 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/28 14:48:33 by okraus           ###   ########.fr       */
+/*   Updated: 2025/05/31 19:46:43 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_itoa(int n)
 	unsigned int	m;
 
 	i = ft_numlen(n) - 1;
-	str = (char *)malloc((i + 2) * sizeof(char));
+	str = malloc((i + 2) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	str[i + 1] = 0;

@@ -6,7 +6,7 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:02:27 by okraus            #+#    #+#             */
-/*   Updated: 2023/12/28 16:31:30 by okraus           ###   ########.fr       */
+/*   Updated: 2025/05/31 19:47:08 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	newlen = ft_strtrimnl(s1, set);
 	start = ft_strtrimfs(s1, set);
-	s2 = (char *)malloc((newlen + 1) * sizeof(char));
+	s2 = malloc((newlen + 1) * sizeof(char));
 	if (s2 == NULL)
 		return (NULL);
 	i = 0;
