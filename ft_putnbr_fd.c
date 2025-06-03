@@ -6,7 +6,7 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 17:39:11 by okraus            #+#    #+#             */
-/*   Updated: 2025/06/02 15:44:11 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/03 18:34:18 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ void	ft_putnbr_fd(int n, int fd)
 	tmp = n;
 	while (tmp != 0)
 		tmp /= 10 + 0 * len++;
-	if (str == NULL)
-		return (NULL);
 	str[len] = '\0';
 	str[0] = '-';
 	while (len-- > (n < 0))
