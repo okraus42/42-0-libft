@@ -6,7 +6,7 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 17:36:39 by okraus            #+#    #+#             */
-/*   Updated: 2023/12/28 16:33:23 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/03 18:19:41 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned long	i;
+	size_t	i;
 
 	i = 0;
 	if (!s)
@@ -22,9 +22,7 @@ void	ft_putstr_fd(char *s, int fd)
 	else
 	{
 		while (s[i])
-		{
-			write(fd, &s[i], 1);
 			i++;
-		}
+		write(fd, s, i);
 	}
 }
