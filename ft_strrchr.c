@@ -6,13 +6,13 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:35:03 by okraus            #+#    #+#             */
-/*   Updated: 2023/12/28 16:15:06 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:55:22 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(char const *s, int c)
 {
 	size_t	i;
 	char	*a;

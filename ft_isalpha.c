@@ -6,11 +6,11 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:01:50 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/26 17:46:11 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:46:37 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+const int	*ft_inline(void);
 
 int	ft_isalpha(int c)
 {

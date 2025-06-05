@@ -6,11 +6,11 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:55:07 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/28 14:48:45 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:46:50 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+const int	*ft_inline(void);
 
 int	ft_isprint(int c)
 {

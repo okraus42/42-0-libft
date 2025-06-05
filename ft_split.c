@@ -6,11 +6,13 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:02:36 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/24 18:14:39 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:56:10 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+
+size_t	ft_strlen(char const *str);
 
 // static inline int	ft_check_separator(char const s, char const c)
 // {
@@ -45,7 +47,7 @@ static void	ft_move_pointer(char **dst, char d, int *in_word, int i)
 	*in_word = i;
 }
 
-static void	ft_fill_words(char **result, const char *s, char c)
+static void	ft_fill_words(char **result, char const *s, char c)
 {
 	char	*buf;
 	char	*dst;

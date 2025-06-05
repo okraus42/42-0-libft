@@ -6,11 +6,9 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 14:42:13 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/30 15:48:14 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:50:39 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_tolower(int c)
 {

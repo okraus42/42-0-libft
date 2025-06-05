@@ -6,13 +6,13 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 13:57:55 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/30 15:41:54 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:55:22 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, char const *src, size_t size)
 {
 	size_t	i;
 	size_t	j;

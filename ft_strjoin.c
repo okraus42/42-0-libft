@@ -6,11 +6,14 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 15:23:40 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/31 19:47:00 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:54:39 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include <stdlib.h>
+
+size_t	ft_strlen(char const *str);
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

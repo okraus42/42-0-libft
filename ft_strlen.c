@@ -6,13 +6,15 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 13:42:25 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/24 18:21:31 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:55:22 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <stddef.h>
+
+size_t	ft_strlen(char const *str)
 {
-	const char			*s;
+	char const			*s;
 	const unsigned long	*lw_ptr;
 	unsigned long		lw;
 
@@ -25,7 +27,7 @@ int	ft_strlen(char *str)
 		lw = *lw_ptr;
 		if (((lw - 0x0101010101010101UL) & ~lw & 0x8080808080808080UL) != 0)
 		{
-			s = (const char *)lw_ptr;
+			s = (char const *)lw_ptr;
 			while (*s)
 				++s;
 			return (s - str);

@@ -6,11 +6,9 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 14:16:48 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/30 15:46:57 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:50:46 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

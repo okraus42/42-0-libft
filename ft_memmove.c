@@ -6,11 +6,11 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 10:45:07 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/30 15:41:24 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:52:15 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

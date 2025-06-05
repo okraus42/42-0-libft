@@ -6,11 +6,11 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:02:44 by okraus            #+#    #+#             */
-/*   Updated: 2025/06/01 12:23:18 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:51:05 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 char	*ft_itoa(int n)
 {

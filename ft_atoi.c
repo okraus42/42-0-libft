@@ -6,13 +6,11 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 16:09:33 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/28 14:48:50 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:55:22 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_atoi(const char *nptr)
+int	ft_atoi(char const *nptr)
 {
 	long long	res;
 	int			sign;

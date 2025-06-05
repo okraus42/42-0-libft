@@ -6,11 +6,9 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:14:01 by okraus            #+#    #+#             */
-/*   Updated: 2025/06/03 18:33:26 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:47:50 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #include <stddef.h>
 #include <stdint.h>

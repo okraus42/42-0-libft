@@ -6,11 +6,9 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 17:30:41 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/26 17:53:22 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:45:57 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 inline const int	*ft_inline(void)
 {

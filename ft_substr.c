@@ -6,11 +6,14 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 15:05:43 by okraus            #+#    #+#             */
-/*   Updated: 2025/05/31 19:46:34 by okraus           ###   ########.fr       */
+/*   Updated: 2025/06/05 14:55:22 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include <stdlib.h>
+
+char	*ft_strdup(char const *s);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
