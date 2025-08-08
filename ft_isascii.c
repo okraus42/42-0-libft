@@ -6,11 +6,11 @@
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:19:15 by okraus            #+#    #+#             */
-/*   Updated: 2025/06/05 14:46:40 by okraus           ###   ########.fr       */
+/*   Updated: 2025/08/08 15:45:33 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-const int	*ft_inline(void);
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

@@ -6,13 +6,12 @@
 #    By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 13:43:18 by okraus            #+#    #+#              #
-#    Updated: 2025/06/04 17:04:48 by okraus           ###   ########.fr        #
+#    Updated: 2025/08/08 15:43:54 by okraus           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
-SRC		= ft_inline.c\
-		ft_isalpha.c\
+SRC		= ft_isalpha.c\
 		ft_toupper.c\
 		ft_isdigit.c\
 		ft_tolower.c\

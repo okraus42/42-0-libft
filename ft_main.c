@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okraus <okraus@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 15:29:52 by okraus            #+#    #+#             */
-/*   Updated: 2025/08/08 15:45:25 by okraus           ###   ########.fr       */
+/*   Created: 2025/08/08 15:48:09 by okraus            #+#    #+#             */
+/*   Updated: 2025/08/08 15:48:10 by okraus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <ctype.h>
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	main(void)
 {
-	return (((unsigned)c < 256U) * (ft_inline()[c & 0xFF] & 0x8));
+	int	test;
+
+	test = 'a';
+	printf("ft: %i, orig: %i\n", ft_isalpha(test), isalpha(test));
+	return (0);
 }
